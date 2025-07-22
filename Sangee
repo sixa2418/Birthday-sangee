@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Sangee! 🎂</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 40px;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      color: #ff1493;
+      animation: bounce 1s infinite alternate;
+    }
+    .cake { font-size: 5em; animation: spin 5s infinite linear; }
+    .photo {
+      margin: 20px auto;
+      border: 10px solid #ffb6c1;
+      border-radius: 20px;
+      width: 300px;
+      box-shadow: 0 0 20px #ff69b4;
+    }
+    .msg {
+      font-size: 1.3em;
+      color: #d63384;
+      margin: 20px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #f08080;
+      display: inline-block;
+    }
+    .btn {
+      background: #ff66b2;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 30px;
+      box-shadow: 0 0 10px #ff66b2;
+      transition: transform 0.2s;
+    }
+    .btn:hover { transform: scale(1.1) rotate(5deg); }
+    .popup {
+      display: none;
+      font-size: 1.2em;
+      margin-top: 20px;
+      color: #800040;
+      animation: pop 0.5s ease-in-out forwards;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 1em;
+      color: #999;
+    }
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-15px); }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes pop {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday Sangee! 👑</h1>
+  <div class="cake">🎂</div>
+
+  <img class="photo" src="your-image.jpg" alt="Beautiful Sangee" />
+
+  <div class="msg">
+    Hey my cutie monkey 🐒,<br>
+    Another year older… but still the same level of madness! 😜<br>
+    Just one question: <b>when will u grow up??</b> 🤪<br><br>
+    You’re the most beautiful chaos in my life 💘<br>
+    From your personal joker,<br>
+    — <b>Siva</b> 🎈
+  </div>
+
+  <button class="btn" onclick="showLove()">Click for your gift 🎁</button>
+
+  <div class="popup" id="popupText">
+    💌 Roses are red, your kurti is white,<br>
+    You’re my sunshine even when I lose the fight! ☀️<br>
+    P.S: No sharing cake, ok? 😋🍰
+  </div>
+
+  <audio id="bgMusic" src="https://www.youtube.com/watch?v=o169wQ_4-1w" preload="auto" loop></audio>
+  <audio id="laughSound" src="https://www.soundjay.com/human/laugh-2.mp3" preload="auto"></audio>
+
+  <!-- Confetti & Music Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    window.onload = function() {
+      document.getElementById('bgMusic').play().catch(()=>{});
+      confetti({ particleCount:200, spread:100, origin:{ y:0.6 } });
+    }
+    function showLove() {
+      document.getElementById("popupText").style.display = "block";
+      document.getElementById("laughSound").play();
+      confetti({ particleCount:100, spread:120, origin:{ y:0.7 } });
+    }
+  </script>
+
+  <footer>Made with love & sarcasm by Siva 💘</footer>
+</body>
+</html>
